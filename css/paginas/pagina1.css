@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url('/img/fondo.jpg');
+  font-family: 'Fredoka One', cursive;
+}
+
+#nombreJugador {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 45px;
+  text-align: center;
+  color: white;
+  line-height: 45px;
+  font-size: 2em;
+}
+
+#areaTrabajo {
+  position: absolute;
+  background-color: transparent;
+  border: 5px white solid;
+}
+
+.astronauta {
+  position: absolute;
+  width: 130px;
+  height: 150px;
+  background-image: url('/img/astronauta_130x150.png');
+  transition: 3s ease-in-out;
+}
+
+.bounce {
+  animation: bounce 3s ease-in-out infinite;
+}
+
+.planeta {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-image: url('/img/planeta_150x150.png');
+  animation: spin 4s linear infinite;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 150px;
+}
+
+.botones {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 40px;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+}
+
+.galaxia1 {
+  background-color: #0E103D;
+  border: 5px solid #00D4FF;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  padding: 20px;
+  z-index: 100;
+  width: 500px;
+}
+
+.galaxia1 h2 {
+  font-size: 24px;
+  color: #00D4FF;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.galaxia1 .descripcion {
+  text-align: center;
+  margin-bottom: 20px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.galaxia1 p {
+  color: #BBDEF0;
+  text-align: center;
+  line-height: 1.4;
+  margin: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.galaxia1 button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .3s;
+  margin: 30px 120px;
+  text-align: center;
+}
+
+.galaxia1 button:hover {
+  background-color: #ff5e5b;
+  transform: scale(1.05);
+}
+
+.contenedor_preguntas {
+  background-color: #0E103D;
+  border: 5px solid #00D4FF;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  padding: 20px;
+  width: 700px;
+  height: 43%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  margin: 0 auto;
+  display: none;
+}
+
+.encabezado {
+  background-color: #0E103D;
+  border: 5px solid #00D4FF;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  position: relative;
+  background: white;
+  width: 96%;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.categoria {
+  opacity: 0.3;
+  text-align: left;
+}
+
+.pregunta {
+  padding: 10px;
+  text-align: center;
+}
+
+.imagen {
+  object-fit: cover;
+  max-width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #0E103D;
+  border: 3px solid #00D4FF;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: white;
+  width: 100%;
+  max-width: 550px;
+  padding: 10px;
+  margin: 5px auto;
+  /* Agregamos esta línea para centrar los botones horizontalmente */
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.numero {
+  position: absolute;
+  opacity: 0.3;
+  top: 10px;
+  right: 10px;
+}
+
+.form_btn {
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+/* ***************** ESTILOS DEL DIALOG DE CADA PLANETA ***************** */
+#infoplaneta {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 0 10px white;
+  padding: 20px;
+  z-index: 100;
+  display: none;
+  width: 500px;
+}
+
+#infoplaneta .nombre {
+  font-size: 24px;
+  color: black;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+#infoplaneta .contenido {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+#infoplaneta .foto {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+#infoplaneta .descripcion {
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+#btnContinuar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0px 180px;
+}
+
+#btnContinuar:hover {
+  background-color: #ff5e5b;
+  transform: scale(1.05);
+}
+
+#puntuacion {
+  position: absolute;
+  top: 10px; /* Ajusta la posición vertical según tus necesidades */
+  right: 10px; /* Ajusta la posición horizontal según tus necesidades */
+  background-color: lightgray;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
