@@ -7,7 +7,6 @@ let preguntas_facil = [
       "incorrecta2": "🍎🍎🍎🍎",
       "incorrecta3": "🍎🍎🍎🍎🍎",
       "objectFit": "cover",
-      "audio": "/music/pregunta1.mp3"
     },
     {
       "categoria": "resta",
@@ -17,7 +16,6 @@ let preguntas_facil = [
       "incorrecta2": "🍌",
       "incorrecta3": "🍌🍌🍌🍌",
       "objectFit": "cover",
-      "audio": "/music/pregunta2.mp3"
     },
     {
       "categoria": "suma",
@@ -27,7 +25,6 @@ let preguntas_facil = [
       "incorrecta2": "🍊🍊🍊🍊",
       "incorrecta3": "🍊🍊🍊🍊🍊",
       "objectFit": "cover",
-      "audio": "/music/pregunta3.mp3"
     },
     {
       "categoria": "resta",
@@ -37,7 +34,6 @@ let preguntas_facil = [
       "incorrecta2": "🍇🍇🍇",
       "incorrecta3": "🍇🍇🍇🍇",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     },
     {
       "categoria": "suma",
@@ -47,7 +43,6 @@ let preguntas_facil = [
       "incorrecta2": "🍐🍐🍐",
       "incorrecta3": "🍐🍐🍐🍐🍐",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     },
     {
       "categoria": "resta",
@@ -57,7 +52,6 @@ let preguntas_facil = [
       "incorrecta2": "🍓",
       "incorrecta3": "🍓🍓🍓",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     },
     {
       "categoria": "suma",
@@ -67,7 +61,6 @@ let preguntas_facil = [
       "incorrecta2": "🍉🍉🍉🍉🍉",
       "incorrecta3": "🍉🍉🍉🍉🍉🍉🍉",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     },
     {
       "categoria": "resta",
@@ -77,7 +70,6 @@ let preguntas_facil = [
       "incorrecta2": "🍋🍋🍋",
       "incorrecta3": "🍋🍋🍋🍋",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     },
     {
       "categoria": "suma",
@@ -87,7 +79,7 @@ let preguntas_facil = [
       "incorrecta2": "🥝🥝🥝",
       "incorrecta3": "🥝🥝🥝🥝🥝",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
+      
     },
     {
       "categoria": "resta",
@@ -97,7 +89,6 @@ let preguntas_facil = [
       "incorrecta2": "🥥🥥🥥",
       "incorrecta3": "🥥🥥🥥🥥🥥🥥",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     },
     {
       "categoria": "suma",
@@ -107,7 +98,6 @@ let preguntas_facil = [
       "incorrecta2": "🍌🍌🍌🍌🍌🍌🍌",
       "incorrecta3": "🍌🍌🍌🍌🍌🍌",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     },
     {
       "categoria": "resta",
@@ -117,7 +107,6 @@ let preguntas_facil = [
       "incorrecta2": "🍑🍑🍑",
       "incorrecta3": "🍑🍑🍑🍑",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     },
     {
       "categoria": "suma",
@@ -127,7 +116,6 @@ let preguntas_facil = [
       "incorrecta2": "🥭🥭🥭🥭🥭🥭",
       "incorrecta3": "🥭🥭🥭🥭🥭🥭🥭🥭",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     },
     {
       "categoria": "suma",
@@ -137,7 +125,6 @@ let preguntas_facil = [
       "incorrecta2": "🍍🍍🍍🍍🍍🍍",
       "incorrecta3": "🍍🍍🍍🍍🍍🍍🍍🍍",
       "objectFit": "cover",
-      "audio": "/music/alien.mp3"
     }
   ];
   

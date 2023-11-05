@@ -1,11 +1,11 @@
 const audio = document.getElementById("myAudio");
-// var sound = new Audio();
+const correcto = document.getElementById("audioCorrecto");
+const incorrecto = document.getElementById("audioIncorrecto");
 
-// sound.src = "/music/alien.mp3"
-
-
-// sound.volume = 0.1;
-audio.volume = 0.025;
+// Ajustar el volumen de los audios
+audio.volume = 0.018;
+correcto.volume = 0.1;
+incorrecto.volume = 0.1;
 
 audio.addEventListener("ended", function() {
   this.currentTime = 0;

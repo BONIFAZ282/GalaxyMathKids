@@ -107,6 +107,9 @@ function responderPregunta(index_respuesta) {
     dialogPregunta.querySelectorAll(".btn")[index_respuesta].style.background =
       "lightgreen";
 
+    // Reproducir audio de respuesta correcta
+    document.getElementById("audioCorrecto").play();
+
     // Sumar 10 puntos por respuesta correcta
     puntuacion += 10;
 
@@ -136,6 +139,9 @@ function responderPregunta(index_respuesta) {
     dialogPregunta.querySelectorAll(".btn")[index_respuesta].style.background =
       "pink";
 
+    // Reproducir audio de respuesta incorrecta
+    document.getElementById("audioIncorrecto").play();
+
     // Restar 5 puntos por respuesta incorrecta
     puntuacion -= 5;
 
@@ -146,9 +152,6 @@ function responderPregunta(index_respuesta) {
     setTimeout(reiniciarEstilosBotones, 2000);
   }
 }
-
-
-
 
 // Función para iniciar el juego.
 function iniciarJuego() {
