@@ -5,7 +5,7 @@ const audio = document.getElementById("myAudio");
 
 
 // sound.volume = 0.1;
-audio.volume = 0.1;
+audio.volume = 0.025;
 
 audio.addEventListener("ended", function() {
   this.currentTime = 0;

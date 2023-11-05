@@ -1,3 +1,4 @@
+// Obtención de referencias a los botones de diálogo
 const btnDialogo1 = document.getElementById("dialogo1");
 const btnDialogo2 = document.getElementById("dialogo2");
 const btnDialogo3 = document.getElementById("dialogo3");
@@ -6,6 +7,7 @@ const btnDialogoCombi = document.getElementById("dialogoCombi");
 const btnDialogoAstro1 = document.getElementById("dialogoAstro1");
 const btnDialogoAstro2 = document.getElementById("dialogoAstro2");
 
+// Agregar eventos de escucha a los botones de diálogo
 btnDialogo1.addEventListener("click", function () {
   const dialogo1 = document.querySelector(".dialogo1");
   const dialogo2 = document.querySelector(".dialogo2");
@@ -49,5 +51,6 @@ btnDialogoCombi.addEventListener("click", function () {
 });
 
 btnDialogoAstro2.addEventListener("click", function () {
+  // Redireccionar a la página1.html
   location.href = "/html/paginas/pagina1.html";
 });

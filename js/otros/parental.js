@@ -1,140 +1,140 @@
+// Declaración de una lista vacía para almacenar los niños
 let listaNinos = [];
 
-const objEmpleado = {
+// Definición de un objeto para representar a un niño
+const objNino = {
     id: '',
     nombre: '',
     apellido: '',
     edad: '',
-    tiempo: ''
+    tiempo: '',
+    puntuacion: '',
 }
 
+// Variable para controlar si se está editando un niño o no
 let editando = false;
 
+// Obtención de referencias a los elementos del formulario
 const formulario = document.querySelector('#formulario');
 const nombreInput = document.querySelector('#nombre');
 const apellidoInput = document.querySelector('#apellido');
 const edadInput = document.querySelector('#edad');
 const tiempoInput = document.querySelector('#tiempo');
+const puntuacionInput = document.querySelector('#puntuacion');
 const btnAgregarInput = document.querySelector('#btnAgregar');
 
-formulario.addEventListener('submit', validarFormulario); wwwww
+// Agregar un evento de escucha al formulario para validar los datos ingresados
+formulario.addEventListener('submit', validarFormulario);
 
+// Función para validar el formulario al momento de enviarlo
 function validarFormulario(e) {
     e.preventDefault();
 
     if (editando) {
-        editarEmpleado();
+        editarNino();
         editando = false;
     } else {
-        objEmpleado.id = Date.now();
-        objEmpleado.nombre = nombreInput.value;
-        objEmpleado.apellido = apellidoInput.value;
-        objEmpleado.edad = edadInput.value;
-        objEmpleado.tiempo = tiempoInput.value;
+        // Asignar valores del formulario al objeto niño
+        objNino.id = Date.now();
+        objNino.nombre = nombreInput.value;
+        objNino.apellido = apellidoInput.value;
+        objNino.edad = edadInput.value;
+        objNino.tiempo = tiempoInput.value;
+        objNino.puntuacion = puntuacionInput.value;
 
-        agregarEmpleado();
+        // Agregar el niño a la lista
+        agregarNino();
     }
 }
 
-function agregarEmpleado() {
+// Función para agregar un niño a la lista
+function agregarNino() {
+    // Agregar una copia del objeto niño a la lista
+    listaNinos.push({ ...objNino });
 
-    listaNinos.push({ ...objEmpleado });
-
+    // Mostrar la lista de niños en el HTML
     mostrarNinos();
 
+    // Reiniciar el formulario y limpiar el objeto niño
     formulario.reset();
     limpiarObjeto();
 }
 
+// Función para limpiar el objeto niño
 function limpiarObjeto() {
-    objEmpleado.id = '';
-    objEmpleado.nombre = '';
-    objEmpleado.apellido = '';
-    objEmpleado.edad = '';
-    objEmpleado.tiempo = '';
+    objNino.id = '';
+    objNino.nombre = '';
+    objNino.apellido = '';
+    objNino.edad = '';
+    objNino.tiempo = '';
+    objNino.puntuacion = '';
 }
 
+// Función para mostrar la lista de niños en el HTML
 function mostrarNinos() {
+    // Limpiar el contenido HTML anterior
     limpiarHTML();
 
+    // Obtener referencia al elemento contenedor de los niños
     const divNinos = document.querySelector('.div-ninos');
 
-    listaNinos.forEach(empleado => {
-        const { id, nombre, apellido, edad, tiempo } = empleado;
+    // Iterar sobre la lista de niños y crear elementos HTML para mostrarlos
+    listaNinos.forEach(nino => {
+        const { id, nombre, apellido, edad, tiempo, puntuacion } = nino;
 
+        // Crear un párrafo para mostrar los datos del niño
         const parrafo = document.createElement('p');
-        parrafo.textContent = `${nombre} - ${apellido} - ${edad} - ${tiempo}`;
+        parrafo.textContent = `${nombre} ${apellido} - ${edad} - ${tiempo} - ${puntuacion}`;
         parrafo.dataset.id = id;
 
-        const editarBoton = document.createElement('button');
-        editarBoton.onclick = () => cargarEmpleado(empleado);
-        editarBoton.textContent = 'Editar';
-        editarBoton.classList.add('btn', 'btn-editar');
-        parrafo.append(editarBoton);
-
+        // Crear un botón para eliminar el niño
         const eliminarBoton = document.createElement('button');
-        eliminarBoton.onclick = () => eliminarEmpleado(id);
+        eliminarBoton.onclick = () => eliminarNino(id);
         eliminarBoton.textContent = 'Eliminar';
         eliminarBoton.classList.add('btn', 'btn-eliminar');
         parrafo.append(eliminarBoton);
 
+        // Crear una línea horizontal para separar los niños
         const hr = document.createElement('hr');
 
+        // Agregar el párrafo y la línea horizontal al contenedor
         divNinos.appendChild(parrafo);
         divNinos.appendChild(hr);
     });
 }
 
-function cargarEmpleado(empleado) {
-    const { id, nombre, apellido, edad } = empleado;
+// Función para cargar los datos de un niño en el formulario para editar
+function cargarNino(nino) {
+    const { id, nombre, apellido, edad, tiempo, puntuacion } = nino;
 
+    // Asignar los valores del niño al formulario
     nombreInput.value = nombre;
     apellidoInput.value = apellido;
     edadInput.value = edad;
     tiempoInput.value = tiempo;
+    puntuacionInput.value = puntuacion;
 
-    objEmpleado.id = id;
+    // Asignar el ID del niño al objeto niño
+    objNino.id = id;
 
+    // Cambiar el texto del botón de envío del formulario a "Actualizar"
     formulario.querySelector('button[type="submit"]').textContent = 'Actualizar';
 
+    // Establecer la variable de edición a true
     editando = true;
 }
 
-function editarEmpleado() {
+// Función para eliminar un niño de la lista
+function eliminarNino(id) {
+    // Filtrar la lista de niños para eliminar el niño con el ID especificado
+    listaNinos = listaNinos.filter(nino => nino.id !== id);
 
-    objEmpleado.nombre = nombreInput.value;
-    objEmpleado.apellido = apellidoInput.value;
-    objEmpleado.edad = edadInput.value;
-    objEmpleado.tiempo = tiempoInput.value;
-
-    listaninos.map(empleado => {
-
-        if (empleado.id === objEmpleado.id) {
-            empleado.id = objEmpleado.id;
-            empleado.nombre = objEmpleado.nombre;
-            empleado.apellido = objEmpleado.apellido;
-            empleado.edad = objEmpleado.edad;
-            empleado.tiempo = objEmpleado.tiempo;
-        }
-    });
-
-    limpiarHTML();
-    mostrarNinos();
-    formulario.reset();
-
-    formulario.querySelector('button[type="submit"]').textContent = 'Agregar';
-
-    editando = false;
-}
-
-function eliminarEmpleado(id) {
-
-    listaNinos = listaNinos.filter(empleado => empleado.id !== id);
-
+    // Limpiar el contenido HTML anterior y mostrar la lista actualizada
     limpiarHTML();
     mostrarNinos();
 }
 
+// Función para limpiar el contenido HTML del contenedor de niños
 function limpiarHTML() {
     const divNinos = document.querySelector('.div-ninos');
     while (divNinos.firstChild) {
