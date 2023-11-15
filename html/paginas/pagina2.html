@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/css/paginas/pagina2.css">
+    <link rel="shortcut icon" href="/img/media.png" />
+    <title>Nivel Intermedio</title>
+</head>
+
+<body>
+    <audio id="myAudio" loop autoplay>
+        <source src="/music/fondo.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audioCorrecto">
+        <source src="/music/respuestaCorrecta.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audioIncorrecto">
+        <source src="/music/respuestaIncorrecta.mp3" type="audio/mpeg">
+    </audio>
+    <div id="puntuacion">PUNTUACIÓN: 0</div>
+    <div id="nombreJugador">
+
+    </div>
+    <div id="areaTrabajo">
+
+    </div>
+
+    <!-- PREGUNTAS -->
+    <div class="contenedor_preguntas" id="pregunt">
+        <div class="form_btn">
+        </div>
+        <div class="encabezado">
+            <div class="categoria"></div>
+            <div class="numero" id="numero"></div>
+            <div class="pregunta" id="pregunta"></div>
+            <br />
+        </div>
+        <div class="btn" onclick="responderPregunta(0)"></div>
+        <div class="btn" onclick="responderPregunta(1)"></div>
+        <div class="btn" onclick="responderPregunta(2)"></div>
+        <div class="btn" onclick="responderPregunta(3)"></div>
+    </div>
+
+    <div class="galaxia1">
+        <h2>Nos encontramos en el sistema Solar</h2>
+        <div class="contenido">
+            <div class="descripcion">
+                <p>¡Hola, pequeños astrónomos! ¿Sabían que TRAPPIST-1 es como un vecindario estelar con siete planetas?
+                    Sí, ¡siete! Es como un gran club de planetas girando alrededor de una estrella fresca llamada
+                    TRAPPIST-1.</p>
+            </div>
+        </div>
+        <p>Supera los ejercicios para pasar al siguiente nivel</p>
+        <button id="comienzaAventura">¡Comienza tu misión espacial!</button>
+    </div>
+
+
+    <!---------------------- INFORMACIÓN DE LOS PLANETAS ---------------------->
+    <div id="infoplaneta">
+        <h2 class="nombre"></h2>
+        <div class="contenido">
+            <img class="foto">
+            <div class="descripcion"></div>
+        </div>
+        <button id="btnContinuar">Continuar</button>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/otros/sonidos.js"></script>
+    <script src="/js/data/preguntas-medium.js"></script>
+    <script src="/js/pagina2/clases.js"></script>
+    <script src="/js/pagina2/dataplanetas2.js"></script>
+    <script src="/js/pagina2/principal2.js"></script>
+</body>
+
+</html>

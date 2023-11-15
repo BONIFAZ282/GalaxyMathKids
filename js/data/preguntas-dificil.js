@@ -1,4 +1,4 @@
-let preguntas_facil = [
+let preguntas_dificil = [
   {
     "categoria": "Suma",
     "pregunta": "🌌🌌 + 🌌",
