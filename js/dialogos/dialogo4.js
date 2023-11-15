@@ -30,5 +30,5 @@ btnDialogoAstro1.addEventListener('click', function() {
 
 
 btnDialogoCombi.addEventListener('click', function() {
-    location.href = "2Completado.html"
+    location.href = "/html/niveles/2Completado.html"
 });

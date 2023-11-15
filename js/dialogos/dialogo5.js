@@ -51,5 +51,5 @@ btnDialogoCombi.addEventListener('click', function() {
 
 
 btnDialogoAstro2.addEventListener('click', function() {
-    location.href = "pagina3.html"
+    location.href = "/html/paginas/pagina3.html"
 });

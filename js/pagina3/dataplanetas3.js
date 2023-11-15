@@ -11,9 +11,9 @@ let dataplanetas = [
     {
         index: 0,
         msg_bg_color: "#A0A0A0",
-        nombre: "Susurro",
+        nombre: "Brisa",
         foto: "img/mercurio.png",
-        descripcion: "En el Planeta Susurro, todo es tranquilo y apacible. Los alienígenas disfrutan de su tiempo en la naturaleza y escuchan suaves susurros de la brisa."
+        descripcion: " En el Planeta Brisa, la suave brisa acaricia los campos de flores mientras los alienígenas disfrutan de un clima relajante."
     },
     {
         index: 1,
@@ -46,43 +46,71 @@ let dataplanetas = [
     {
         index: 5,
         msg_bg_color: "#77B5FE",
-        nombre: "Acuático Tranquilo",
+        nombre: "Acuático",
         foto: "img/saturno.png",
         descripcion: "Con océanos serenos, el Planeta Acuático Tranquilo es el lugar perfecto para encontrar paz junto al agua."
     },
     {
         index: 6,
         msg_bg_color: "#E6B67C",
-        nombre: "Abrazo Cálido",
+        nombre: "Abrazo",
         foto: "img/urano.png",
         descripcion: "En este planeta, siempre hay abrazos cálidos esperando. Los alienígenas comparten amor y afecto como un gesto cotidiano."
     },
     {
         index: 7,
         msg_bg_color: "#B5CCD3",
-        nombre: "Celeste Suave",
+        nombre: "Celeste",
         foto: "img/neptuno.png",
         descripcion: "Con cielos suaves y nubes etéreas, el Planeta Celeste Suave ofrece un paisaje celestial relajante."
     },
     {
         index: 8,
         msg_bg_color: "#9C88B5",
-        nombre: "Melodía Nocturna",
+        nombre: "Melodía",
         foto: "img/neptuno.png",
         descripcion: "Este planeta cobra vida por la noche con melodías suaves. Los alienígenas disfrutan de conciertos nocturnos bajo las estrellas."
     },
     {
         index: 9,
         msg_bg_color: "#B8A99A",
-        nombre: "Somnoliento",
+        nombre: "Sueño",
         foto: "img/neptuno.png",
-        descripcion: "¡Este planeta tiene océanos interminables! Los alienígenas practican deportes acuáticos olímpicos y organizan competiciones de natación entre estrellas."
+        descripcion: "Un lugar tranquilo donde todos parecen estar siempre un poco soñolientos. Los alienígenas valoran la relajación y la siesta espacial."
     },
     {
         index: 10,
-        msg_bg_color: "#9B8F7E",
-        nombre: "Rítmico",
+        msg_bg_color: "#A3BFA0",
+        nombre: "Velero",
         foto: "img/neptuno.png",
-        descripcion: " En el Planeta Rítmico, todos los alienígenas tienen ritmo. ¡Bailan al ritmo de las estrellas y organizan fiestas de baile espaciales que duran toda la noche!"
+        descripcion: "En el Planeta Velero, suaves brisas impulsan pequeños veleros celestiales a través de ríos de luz."
+    },
+    {
+        index: 11,
+        msg_bg_color: "#D1CFC0",
+        nombre: "Luminis",
+        foto: "img/neptuno.png",
+        descripcion: "Luminis es un planeta donde la luz parece bailar en cada rincón, creando un resplandor encantado"
+    },
+    {
+        index: 12,
+        msg_bg_color: "#B5B5A7",
+        nombre: "Cobijo",
+        foto: "img/neptuno.png",
+        descripcion: "En el Planeta Cobijo, los alienígenas construyen refugios acogedores entre colinas suaves y valles tranquilos."
+    },
+    {
+        index: 13,
+        msg_bg_color: "#9E94A5",
+        nombre: "Sinfonía",
+        foto: "img/neptuno.png",
+        descripcion: "En Sinfonía, los sonidos suaves de la naturaleza se mezclan en una armoniosa sinfonía que acompaña la vida diaria."
+    },
+    {
+        index: 14,
+        msg_bg_color: "#B3B3B3",
+        nombre: "Sinfonía",
+        foto: "img/neptuno.png",
+        descripcion: "Espejismo es un planeta de ilusiones suaves, donde los paisajes cambian misteriosamente para deleitar a los visitantes."
     }
 ]
