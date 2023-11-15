@@ -23,7 +23,7 @@ body {
 .dificultad {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 40px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -100,8 +100,16 @@ body {
   transform: scale(1.05);
 }
 
+.modulos{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
-.modulo-parental {
+
+.modulo-parental,
+.modulo-soporte {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
@@ -109,7 +117,8 @@ body {
   margin-right: 20px;
 }
 
-.btn-modulo-parental {
+.btn-modulo-parental,
+.btn-modulo-soporte {
   display: inline-block;
   padding: 10px 20px;
   background-color: #ff6b6b;
@@ -124,12 +133,14 @@ body {
   margin: 10px 160px;
 }
 
-.btn-modulo-parental:hover {
+.btn-modulo-parental:hover,
+.btn-modulo-soporte:hover {
   background-color: #ff5e5b;
   transform: scale(1.05);
 }
 
-.btn-modulo-parental a {
+.btn-modulo-parental a,
+.btn-modulo-soporte a{
   text-decoration: none;
   color: #fff;
 }
