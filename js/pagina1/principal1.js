@@ -99,7 +99,6 @@ function reiniciarEstilosBotones() {
   }
 }
 
-
 function responderPregunta(index_respuesta) {
   if (preguntaActualObj.verificarRespuesta(index_respuesta)) {
     // Respuesta correcta
@@ -133,6 +132,7 @@ function responderPregunta(index_respuesta) {
       // Hacer viajar al astronauta
       astro.viajarAlPlaneta(index_planeta);
     }, 2000);
+    localStorage.setItem("puntuacion", puntuacion);
   } else {
     // Respuesta incorrecta
     // Marcar el botón incorrecto con fondo rosa
@@ -182,7 +182,7 @@ btnContinuar.addEventListener("click", function () {
   if (index_planeta == numeroplanetas - 1) {
     console.log("Fin del juego");
     // colocar aqui un mensaje de ganaste el juego
-    window.location.href = "/html/dialogos/dialogo2.html";
+    window.location.href = "/html/otros/puntuacion1.html";
     return;
   }
 
