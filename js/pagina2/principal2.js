@@ -84,12 +84,12 @@ function cargarPreguntasRandom() {
   });
 }
 
-let puntuacion = 0;
+let puntuacion2 = 0;
 
 // Función para actualizar la puntuación en el div
 function actualizarPuntuacion() {
-  const puntuacionDiv = document.getElementById("puntuacion");
-  puntuacionDiv.textContent = `PUNTUACIÓN: ${puntuacion}`;
+  const puntuacionDiv = document.getElementById("puntuacion2");
+  puntuacionDiv.textContent = `PUNTUACIÓN: ${puntuacion2}`;
 }
 
 function reiniciarEstilosBotones() {
@@ -111,7 +111,7 @@ function responderPregunta(index_respuesta) {
     document.getElementById("audioCorrecto").play();
 
     // Sumar 10 puntos por respuesta correcta
-    puntuacion += 10;
+    puntuacion2 += 10;
 
     // Actualizar la puntuación en el div
     actualizarPuntuacion();
@@ -133,6 +133,7 @@ function responderPregunta(index_respuesta) {
       // Hacer viajar al astronauta
       astro.viajarAlPlaneta(index_planeta);
     }, 2000);
+    localStorage.setItem("puntuacion2", puntuacion2);
   } else {
     // Respuesta incorrecta
     // Marcar el botón incorrecto con fondo rosa
@@ -143,7 +144,7 @@ function responderPregunta(index_respuesta) {
     document.getElementById("audioIncorrecto").play();
 
     // Restar 5 puntos por respuesta incorrecta
-    puntuacion -= 5;
+    puntuacion2 -= 5;
 
     // Actualizar la puntuación en el div
     actualizarPuntuacion();
@@ -182,7 +183,7 @@ btnContinuar.addEventListener("click", function () {
   if (index_planeta == numeroplanetas - 1) {
     console.log("Fin del juego");
     // colocar aqui un mensaje de ganaste el juego
-    window.location.href = "/html/dialogos/dialogo4.html";
+    window.location.href = "/html/otros/puntuacion2.html";
     return;
   }
 
