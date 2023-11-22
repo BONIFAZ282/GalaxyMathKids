@@ -21,7 +21,7 @@ function botonReglas(){
         }, 3000)
     }else{
         localStorage.setItem("jugador", nombreUsuario.value)
-        location.href = "reglas.html"
+        location.href = "/html/otros/reglas.html"
     }
     return false
 }
