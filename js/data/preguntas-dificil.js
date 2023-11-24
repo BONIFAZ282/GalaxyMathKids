@@ -1,3 +1,5 @@
+// Array de preguntas DIFICL
+
 let preguntas_dificil = [
   {
     "categoria": "matematicas",

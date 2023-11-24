@@ -6,7 +6,7 @@
  * foto: url a la foto del planeta
  * descripcion: descripcion del planeta
  */
-
+ 
 let dataplanetas = [
     {
         index: 0,

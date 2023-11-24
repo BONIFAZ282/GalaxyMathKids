@@ -1,3 +1,4 @@
+/* Estilos generales para el cuerpo de la página */
 body {
   font-family: 'Comic Sans MS', cursive;
   margin: 0;
@@ -5,6 +6,7 @@ body {
   background-image: url('/img/fondo.jpg');
 }
 
+/* Estilos para el contenedor principal */
 .container {
   display: flex;
   flex-direction: column;
@@ -13,6 +15,7 @@ body {
   height: 100vh;
 }
 
+/* Estilos para el título principal */
 .titulo {
   font-size: 36px;
   color: #00D4FF;
@@ -20,6 +23,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Estilos para la sección de niveles de dificultad */
 .dificultad {
   display: flex;
   justify-content: space-between;
@@ -28,6 +32,7 @@ body {
   margin-right: 20px;
 }
 
+/* Estilos para las tarjetas de niveles de dificultad */
 .card {
   width: 450px;
   padding: 20px;
@@ -44,11 +49,13 @@ body {
   justify-content: center;
 }
 
+/* Efecto de zoom y sombra al pasar el ratón por encima de la tarjeta */
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilos para las imágenes dentro de las tarjetas */
 .card img {
   width: 100px;
   height: 100px;
@@ -57,6 +64,7 @@ body {
   margin-bottom: 15px;
 }
 
+/* Estilos para los títulos de las tarjetas */
 .card h3 {
   font-size: 24px;
   color: #00D4FF;
@@ -64,6 +72,7 @@ body {
   margin-bottom: 15px;
 }
 
+/* Estilos para los párrafos dentro de las tarjetas */
 .card p {
   font-size: 16px;
   color: #BBDEF0;
@@ -72,8 +81,8 @@ body {
   margin-bottom: 10px;
 }
 
+/* Estilos para el botón de seleccionar */
 .btn-seleccionar {
-
   display: inline-block;
   padding: 10px 20px;
   background-color: #ff6b6b;
@@ -84,30 +93,32 @@ body {
   margin-top: 10px;
   transition: background-color 0.3s ease-in-out;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
   font-size: 18px;
   cursor: pointer;
   margin: 30px 160px;
 }
 
+/* Estilos para el enlace dentro del botón de seleccionar */
 .btn-seleccionar a {
   text-decoration: none;
   color: #fff;
 }
 
+/* Efecto de color y zoom al pasar el ratón por encima del botón de seleccionar */
 .btn-seleccionar:hover {
   background-color: #ff5e5b;
   transform: scale(1.05);
 }
 
-.modulos{
+/* Estilos para la sección de módulos adicionales */
+.modulos {
   display: flex;
   justify-content: space-between;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-
+/* Estilos para las tarjetas de los módulos parentales y de soporte */
 .modulo-parental,
 .modulo-soporte {
   display: flex;
@@ -117,6 +128,7 @@ body {
   margin-right: 20px;
 }
 
+/* Estilos para los botones de los módulos parentales y de soporte */
 .btn-modulo-parental,
 .btn-modulo-soporte {
   display: inline-block;
@@ -133,14 +145,16 @@ body {
   margin: 10px 160px;
 }
 
+/* Efecto de color y zoom al pasar el ratón por encima de los botones de los módulos */
 .btn-modulo-parental:hover,
 .btn-modulo-soporte:hover {
   background-color: #ff5e5b;
   transform: scale(1.05);
 }
 
+/* Estilos para los enlaces dentro de los botones de los módulos */
 .btn-modulo-parental a,
-.btn-modulo-soporte a{
+.btn-modulo-soporte a {
   text-decoration: none;
   color: #fff;
 }

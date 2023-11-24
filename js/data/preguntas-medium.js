@@ -1,3 +1,5 @@
+// Array de preguntas MEDIO
+
 let preguntas_medium = [
   {
     "categoria": "matematicas",

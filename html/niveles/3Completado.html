@@ -2,16 +2,25 @@
 <html lang="en">
 
 <head>
+    <!-- Document Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleccione su nivel</title>
+
+    <!-- External Stylesheet Link -->
     <link rel="stylesheet" href="/css/niveles/Completado.css">
+    <link rel="shortcut icon" href="/img/marte.png" />
 </head>
 
 <body>
+    <!-- Main Content Container -->
     <div class="container">
+        <!-- Congratulations Message -->
         <h2 class="titulo">FELICIDADES, COMPLETASTE EL JUEGO! 😁😎</h2>
+
+        <!-- Difficulty Completion Section -->
         <div class="dificultad">
+            <!-- Card 1: Easy Level -->
             <div class="card card-completado">
                 <div class="completado-overlay">
                     <p>Nivel Completado</p>
@@ -25,6 +34,8 @@
                     Completado
                 </button>
             </div>
+
+            <!-- Card 2: Intermediate Level -->
             <div class="card card-completado">
                 <div class="completado-overlay">
                     <p>Nivel Completado</p>
@@ -38,13 +49,15 @@
                     Completado
                 </button>
             </div>
+
+            <!-- Card 3: Difficult Level -->
             <div class="card card-completado">
                 <div class="completado-overlay">
                     <p>Nivel Completado</p>
                 </div>
                 <img src="/img/dificil.png" alt="Nivel Difícil">
                 <h3>Nivel Difícil (6 - más)</h3>
-                <p>¡Solo para los valientes! Este nivel es para aquellos que buscan un desafío extremo. Debes de superar
+                <p>¡Solo para los valientes! Este nivel es para aquellos que buscan un desafío extremo. Debes superar
                     complicados ejercicios matemáticos para rescatar planetas en crisis.</p>
                 <p id="puntuacionMostrada3" class="puntuacion3">PUNTUACIÓN: 0</p>
                 <button class="btn-completado">
@@ -52,14 +65,15 @@
                 </button>
             </div>
         </div>
+
+        <!-- Total Score Card -->
         <div class="card puntuacion-total">
             <h3>Puntuación Total:</h3>
             <p id="puntuacionTotal">PUNTUACION: 0</p>
         </div>
     </div>
 
-
-    </div>
+    <!-- External JavaScript Files -->
     <script src="/js/pagina1/puntuacion1.js"></script>
     <script src="/js/pagina2/puntuacion2.js"></script>
     <script src="/js/pagina3/puntuacion3.js"></script>

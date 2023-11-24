@@ -1,5 +1,7 @@
+/* Importar fuente desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+/* Estilos generales del cuerpo del documento */
 body {
   display: flex;
   justify-content: center;
@@ -11,6 +13,7 @@ body {
   font-family: 'Fredoka One', cursive;
 }
 
+/* Estilos del nombre del jugador */
 #nombreJugador {
   position: absolute;
   top: 0px;
@@ -23,12 +26,14 @@ body {
   font-size: 2em;
 }
 
+/* Estilos del área de trabajo */
 #areaTrabajo {
   position: absolute;
   background-color: transparent;
   border: 5px white solid;
 }
 
+/* Estilos del astronauta */
 .astronauta {
   position: absolute;
   width: 130px;
@@ -37,17 +42,17 @@ body {
   transition: 3s ease-in-out;
 }
 
+/* Animación de rebote */
 .bounce {
   animation: bounce 3s ease-in-out infinite;
 }
 
-/* CAMBIAR LA IMAGEN DEL PLANETA*/
-
+/* Estilos del planeta */
 .planeta {
   width: 150px;
   height: 150px;
   position: absolute;
-  background-image: url('/img/desconocido3.png');
+  background-image: url('/img/desconocido3.png'); /* Cambiado a la nueva imagen */
   animation: spin 4s linear infinite;
   color: white;
   font-size: 1.5em;
@@ -55,6 +60,7 @@ body {
   line-height: 150px;
 }
 
+/* Estilos de los botones */
 .botones {
   position: absolute;
   bottom: 0px;
@@ -64,6 +70,7 @@ body {
   text-align: center;
 }
 
+/* Animación de giro */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -74,10 +81,9 @@ body {
   }
 }
 
+/* Animación de rebote */
 @keyframes bounce {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
 
@@ -86,6 +92,7 @@ body {
   }
 }
 
+/* Estilos de la sección galaxia1 */
 .galaxia1 {
   background-color: #0E103D;
   border: 5px solid #00D4FF;
@@ -141,6 +148,7 @@ body {
   transform: scale(1.05);
 }
 
+/* Estilos del contenedor de preguntas */
 .contenedor_preguntas {
   background-color: #0E103D;
   border: 5px solid #00D4FF;
@@ -160,6 +168,7 @@ body {
   display: none;
 }
 
+/* Estilos del encabezado de preguntas */
 .encabezado {
   background-color: #0E103D;
   border: 5px solid #00D4FF;
@@ -191,6 +200,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Estilos de los botones de respuesta */
 .btn {
   background-color: #0E103D;
   border: 3px solid #00D4FF;
@@ -207,7 +217,6 @@ body {
   text-align: center;
 }
 
-
 .numero {
   position: absolute;
   opacity: 0.3;
@@ -221,10 +230,7 @@ body {
   text-align: center;
 }
 
-
-
-
-/* ***************** ESTILOS DEL DIALOG DE CADA PLANETA ***************** */
+/* Estilos del diálogo de cada planeta */
 #infoplaneta {
   position: absolute;
   border-radius: 10px;
@@ -262,6 +268,7 @@ body {
   margin-bottom: 10px;
 }
 
+/* Estilos del botón "Continuar" */
 #btnContinuar {
   display: inline-block;
   padding: 10px 20px;
@@ -283,10 +290,11 @@ body {
   transform: scale(1.05);
 }
 
+/* Estilos de la puntuación */
 #puntuacion3 {
   position: absolute;
-  top: 10px; /* Ajusta la posición vertical según tus necesidades */
-  right: 10px; /* Ajusta la posición horizontal según tus necesidades */
+  top: 10px;
+  right: 10px;
   background-color: lightgray;
   padding: 5px;
   border: 1px solid gray;

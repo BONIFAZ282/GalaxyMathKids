@@ -2,24 +2,37 @@
 <html lang="es">
 
 <head>
+    <!-- Configuración del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galaxia en Peligro</title>
+
+    <!-- Enlace a la hoja de estilo para el primer diálogo -->
     <link rel="stylesheet" href="/css/dialogos/dialogo1.css">
+
+    <!-- Icono de la página -->
+    <link rel="shortcut icon" href="/img/marte.png" />
 </head>
 
 <body>
+    <!-- Reproductor de audio principal con música de fondo -->
     <audio id="myAudio" loop autoplay>
         <source src="/music/alien.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Contenedor principal -->
     <div class="container">
+        <!-- Sección de alienígenas -->
         <div class="alienigenas">
+            <!-- Primer diálogo -->
             <div class="dialogo1">
                 <p>¡Ayuda! ¡los invasores divinos están en este Sistema Solar de Kepler-90!</p>
                 <button class="btn-siguiente" id="dialogo1">
                     <a href="#">Siguiente</a>
                 </button>
             </div>
+
+            <!-- Segundo diálogo -->
             <div class="dialogo2">
                 <p>Están buscando venganza, esta vez se juntaron una gran cantidad de ellos y comenzaron a copiar
                     nuestros planetas.</p>
@@ -27,57 +40,68 @@
                     <a href="#">Siguiente</a>
                 </button>
             </div>
+
+            <!-- Tercer diálogo -->
             <div class="dialogo3">
                 <p>Ahora parece que volvieron mucho más fuertes. Triplicaron algunos planetas, algunos planetas estan
-                    justo casi en la misma orbita. Estan a nada de expltoar, necesitamos tú ayuda.</p>
+                    justo casi en la misma órbita. Están a nada de explotar, necesitamos tu ayuda.</p>
                 <button class="btn-siguiente" id="dialogo3">
                     <a href="#">Siguiente</a>
                 </button>
             </div>
+
+            <!-- Cuarto diálogo -->
             <div class="dialogo4">
                 <p>Confiamos en ti para salvar nuestra Sistema Solar. Resuelve los ejercicios matemáticos de nivel
-                    Dificil y liberalos a los todos. Sino, nuestro sistema explotará porque no puede tener a 18 planetas
-                    juntos</p>
+                    Difícil y libéralos a todos. Sino, nuestro sistema explotará porque no puede tener a 18 planetas
+                    juntos.</p>
                 <button class="btn-siguiente" id="dialogo4">
                     <a href="#">Siguiente</a>
                 </button>
             </div>
 
+            <!-- Diálogo combinado -->
             <div class="dialogoCombi">
-                <p>Si logras derrotar será el fin de ellos. Ya que son los últimos que quedan con vida.</p>
+                <p>Si logras derrotarlos, será el fin de ellos. Ya que son los últimos que quedan con vida.</p>
                 <button class="btn-siguiente" id="dialogoCombi">
                     <a href="#">Siguiente</a>
                 </button>
             </div>
 
+            <!-- Grupo de alienígenas -->
             <div class="grupo_alienigena">
                 <img src="/img/astronauta1.png" alt="Alienígenas">
                 <img src="/img/astronauta2.png" alt="Alienígenas">
                 <img src="/img/astronauta3.png" alt="Alienígenas">
             </div>
-
         </div>
+
+        <!-- Sección del astronauta -->
         <div class="astronauta">
+            <!-- Quinto diálogo -->
             <div class="dialogoAstro1">
-                <p>Que problema, es muy grave. Voy a ayudarlos a todos, no pueden tener tanto planteas en su Sistema</p>
+                <p>Qué problema, es muy grave. Voy a ayudarlos a todos, no pueden tener tantos planetas en su Sistema.</p>
                 <button class="btn-siguiente" id="dialogoAstro1">
                     <a href="#">Siguiente</a>
                 </button>
             </div>
 
+            <!-- Sexto diálogo -->
             <div class="dialogoAstro2">
-                <p>Esta bien. Haré todo lo posible para salvar a todos. Y regresar a la normalidad sus planetas</p>
+                <p>Está bien. Haré todo lo posible para salvar a todos. Y regresar a la normalidad sus planetas.</p>
                 <button class="btn-siguiente" id="dialogoAstro2">
                     <a href="#">Comenzar Aventura</a>
                 </button>
             </div>
+
+            <!-- Grupo del astronauta -->
             <div class="grupo_astronauta">
                 <img src="/img/astronauta_130x150.png" alt="Astronauta">
             </div>
-
         </div>
     </div>
 
+    <!-- Scripts de JavaScript -->
     <script src="/js/dialogos/dialogo5.js"></script>
     <script src="/js/otros/sonidos.js"></script>
 </body>

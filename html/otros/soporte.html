@@ -2,34 +2,50 @@
 <html lang="es">
 
 <head>
+    <!-- Configuración de metadatos del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título de la página -->
     <title>Soporte Técnico - Juego Matemático para Niños</title>
+    
+    <!-- Enlace a la hoja de estilo CSS y favicon -->
     <link rel="stylesheet" href="/css/otros/soporte.css">
+    <link rel="shortcut icon" href="/img/marte.png" />
 </head>
 
 <body>
+    <!-- Encabezado de la página -->
     <h1>Soporte Técnico - Juego Matemático para Niños</h1>
 
+    <!-- Contenedor principal del formulario -->
     <div class="container">
+        <!-- Formulario de soporte técnico -->
         <form id="soporteForm" class="soporte-form">
+            <!-- Título del formulario -->
             <h2>¡Hola amiguito! ¿En qué podemos ayudarte?</h2>
 
+            <!-- Campo para el nombre del usuario -->
             <label for="name">Tu Nombre:</label>
             <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
 
+            <!-- Campo para el correo electrónico del usuario -->
             <label for="email">Tu Correo Electrónico:</label>
             <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
 
+            <!-- Campo para describir el problema -->
             <label for="issue">Cuéntanos tu Problema:</label>
             <textarea id="issue" name="issue" rows="6" placeholder="Describe tu problema aquí..." required></textarea>
 
+            <!-- Botón para enviar el formulario -->
             <button type="button" onclick="submitSupportForm()">Enviar Soporte</button>
         </form>
     </div>
 
+    <!-- Script para manejar el envío del formulario -->
     <script>
         function submitSupportForm() {
+            // Obtener los valores ingresados por el usuario
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const issue = document.getElementById('issue').value;
@@ -40,7 +56,9 @@
             console.log('Correo Electrónico:', email);
             console.log('Problema:', issue);
 
+            // Mensaje de agradecimiento y alerta al usuario
             alert('¡Gracias por contactarnos, amiguito! Tu solicitud de soporte ha sido enviada.');
+
             // Aquí puedes redirigir al usuario a una página de confirmación o realizar otras acciones según tu flujo de trabajo.
         }
     </script>

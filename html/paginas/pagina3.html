@@ -2,51 +2,64 @@
 <html lang="es">
 
 <head>
+    <!-- Configuración del documento -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enlaces a hojas de estilo -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/css/paginas/pagina3.css">
-    <link rel="shortcut icon" href="/img/dificil.png" />
+
+    <!-- Icono de la pestaña -->
+    <link rel="shortcut icon" href="/img/marte.png" />
+
+    <!-- Título de la página -->
     <title>Nivel Dificil</title>
 </head>
 
 <body>
+    <!-- Reproductor de audio de fondo -->
     <audio id="myAudio" loop autoplay>
         <source src="/music/fondo.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Efectos de sonido para respuestas correctas e incorrectas -->
     <audio id="audioCorrecto">
         <source src="/music/respuestaCorrecta.mp3" type="audio/mpeg">
     </audio>
     <audio id="audioIncorrecto">
         <source src="/music/respuestaIncorrecta.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Puntuación actual -->
     <div id="puntuacion3">PUNTUACIÓN: 0</div>
-    <div id="nombreJugador">
 
-    </div>
-    <div id="areaTrabajo">
+    <!-- Nombre del jugador -->
+    <div id="nombreJugador"></div>
 
-    </div>
+    <!-- Área de trabajo principal -->
+    <div id="areaTrabajo"></div>
 
-    <!-- PREGUNTAS -->
+    <!-- Contenedor de preguntas -->
     <div class="contenedor_preguntas" id="pregunt">
-        <div class="form_btn">
-        </div>
+        <div class="form_btn"></div>
         <div class="encabezado">
             <div class="categoria"></div>
             <div class="numero" id="numero"></div>
             <div class="pregunta" id="pregunta"></div>
             <br />
         </div>
+        <!-- Botones de respuesta -->
         <div class="btn" onclick="responderPregunta(0)"></div>
         <div class="btn" onclick="responderPregunta(1)"></div>
         <div class="btn" onclick="responderPregunta(2)"></div>
         <div class="btn" onclick="responderPregunta(3)"></div>
     </div>
 
+    <!-- Información sobre el sistema solar -->
     <div class="galaxia1">
         <h2>Nos encontramos en el sistema Solar</h2>
         <div class="contenido">
@@ -60,8 +73,7 @@
         <button id="comienzaAventura">¡Comienza tu misión espacial!</button>
     </div>
 
-
-    <!---------------------- INFORMACIÓN DE LOS PLANETAS ---------------------->
+    <!-- Información detallada de los planetas -->
     <div id="infoplaneta">
         <h2 class="nombre"></h2>
         <div class="contenido">
@@ -71,7 +83,7 @@
         <button id="btnContinuar">Continuar</button>
     </div>
 
-
+    <!-- Scripts necesarios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/js/otros/sonidos.js"></script>
     <script src="/js/data/preguntas-dificil.js"></script>

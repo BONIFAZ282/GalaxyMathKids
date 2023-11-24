@@ -4,14 +4,20 @@
  */
 
 class Planeta {
-  // Constructor de la clase Planeta
+  /**
+   * Constructor de la clase Planeta
+   * @param {HTMLElement} areaTrabajo - Área donde se colocará el planeta.
+   * @param {HTMLElement} contenedorDialog - Contenedor del diálogo del planeta.
+   * @param {number} pos_x - Posición en el eje X.
+   * @param {number} pos_y - Posición en el eje Y.
+   */
   constructor(areaTrabajo, contenedorDialog, pos_x, pos_y) {
     this.posX = pos_x;
     this.posY = pos_y;
     this.areaTrabajo = areaTrabajo;
     this.contenedorDialog = contenedorDialog;
 
-    //almacenamos la misma data del array de planetas
+    // Almacenamos la misma data del array de planetas
     this.index = 0;
     this.msg_bg_color = "";
     this.nombre = "";
@@ -19,15 +25,17 @@ class Planeta {
     this.descripcion = "";
   }
 
+  /**
+   * Método para insertar un planeta en el área de trabajo.
+   * @param {Object} data - Información del planeta.
+   */
   insertarElemento(data) {
-    // Método para insertar un planeta en el área de trabajo.
     this.index = data.index;
     this.msg_bg_color = data.msg_bg_color;
     this.nombre = data.nombre;
     this.foto = data.foto;
     this.descripcion = data.descripcion;
 
-    //console.log("Insertando planeta en: " + this.posX + ", " + this.posY)
     var planeta = document.createElement("div");
     planeta.classList.add("planeta");
     planeta.style.left = this.posX + "px";
@@ -36,9 +44,10 @@ class Planeta {
     this.areaTrabajo.append(planeta);
   }
 
+  /**
+   * Método para mostrar el diálogo del planeta.
+   */
   mostrarDialogo() {
-    // Método para mostrar el diálogo del planeta.
-
     this.contenedorDialog.style.display = "block";
     this.contenedorDialog.style.backgroundColor = this.msg_bg_color;
     this.contenedorDialog.querySelectorAll(".nombre")[0].innerHTML =
@@ -49,15 +58,20 @@ class Planeta {
       this.descripcion;
   }
 
-  // Método para mostrar las coordenadas del planeta en la consola.
-
+  /**
+   * Método para mostrar las coordenadas del planeta en la consola.
+   */
   mostrarCoordenadas() {
     console.log("X: " + this.posX + ", Y:" + this.posY);
   }
 }
 
 class Astronauta {
-  // Constructor de la clase Astronauta
+  /**
+   * Constructor de la clase Astronauta
+   * @param {HTMLElement} areaTrabajo - Área donde se colocará el astronauta.
+   * @param {Array} planetas - Array de planetas disponibles.
+   */
   constructor(areaTrabajo, planetas) {
     this.planetas = planetas;
     this.posX = getRandom(0, 100);
@@ -68,30 +82,27 @@ class Astronauta {
     this.astro.style.top = this.posY + "px";
     this.astro.style.display = "none";
 
-    // insertamos el astronauta en el dom
     areaTrabajo.append(this.astro);
   }
 
+  /**
+   * Método para mostrar el astronauta en la pantalla.
+   */
   mostrar() {
-    // Método para mostrar el astronauta en la pantalla.
-
     this.astro.style.display = "block";
     this.astro.classList.add("bounce");
   }
 
+  /**
+   * Método para hacer que el astronauta viaje a un planeta.
+   * @param {number} index - Índice del planeta al que se dirige.
+   */
   viajarAlPlaneta(index) {
-    // Método para hacer que el astronauta viaje a un planeta.
-
-    console.log("El astronauta viaja al planeta " + index + "...");
     var planeta = this.planetas[index];
     planeta.mostrarCoordenadas();
 
     var distanciaX = planeta.posX - this.posX;
     var distanciaY = planeta.posY - this.posY;
-
-    console.log(
-      "El astronauta debe moverse: " + distanciaX + ", " + distanciaY
-    );
 
     this.astro.classList.remove("bounce");
     setTimeout(() => {
@@ -106,8 +117,11 @@ class Astronauta {
 }
 
 class Pregunta {
-  // Constructor de la clase Pregunta
-
+  /**
+   * Constructor de la clase Pregunta
+   * @param {HTMLElement} contenedorDialog - Contenedor del diálogo de la pregunta.
+   * @param {Object} data - Información de la pregunta.
+   */
   constructor(contenedorDialog, data) {
     this.contenedorDialog = contenedorDialog;
     this.respuestas = [];
@@ -122,9 +136,10 @@ class Pregunta {
     this.respuestas.push(data.incorrecta3);
   }
 
+  /**
+   * Método para mezclar aleatoriamente las respuestas de la pregunta.
+   */
   randomRespuestas() {
-    // Método para mezclar aleatoriamente las respuestas de la pregunta.
-
     let numeros_random = [];
     let random = 0;
     for (let i = 0; i < this.respuestas.length; i++) {
@@ -140,9 +155,10 @@ class Pregunta {
     });
   }
 
+  /**
+   * Método para mostrar el diálogo de la pregunta.
+   */
   mostrarDialog() {
-    // Método para mostrar el diálogo de la pregunta.
-
     this.randomRespuestas();
     this.contenedorDialog.style.display = "block";
     this.contenedorDialog.querySelectorAll(".categoria")[0].innerHTML =
@@ -159,16 +175,20 @@ class Pregunta {
       this.respuestas_desordenadas[3];
   }
 
-  // Método para verificar si la respuesta seleccionada es correcta.
-
+  /**
+   * Método para verificar si la respuesta seleccionada es correcta.
+   * @param {number} index_respuesta - Índice de la respuesta seleccionada.
+   * @returns {boolean} - true si la respuesta es correcta, false en caso contrario.
+   */
   verificarRespuesta(index_respuesta) {
     return (
       this.respuestas_desordenadas[index_respuesta] == this.respuesta_correcta
     );
   }
 
-  // Método para ocultar el diálogo de la pregunta.
-
+  /**
+   * Método para ocultar el diálogo de la pregunta.
+   */
   ocultarDialog() {
     this.contenedorDialog.style.display = "none";
   }

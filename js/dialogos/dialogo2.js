@@ -1,10 +1,12 @@
+// Obtención de referencias a los botones de diálogo
 const btnDialogo1 = document.getElementById('dialogo1');
 const btnDialogo2 = document.getElementById('dialogo2');
-const btnDialogo3 = document.getElementById('dialogo3');
-const btnDialogoCombi = document.getElementById('dialogoCombi');
 const btnDialogoAstro1 = document.getElementById('dialogoAstro1');
+const btnDialogoCombi = document.getElementById('dialogoCombi');
 
+// Agregar eventos de escucha a los botones de diálogo
 btnDialogo1.addEventListener('click', function() {
+    // Ocultar el primer diálogo y mostrar el segundo
     const dialogo1 = document.querySelector('.dialogo1');
     const dialogo2 = document.querySelector('.dialogo2');
     dialogo1.style.display = 'none';
@@ -12,23 +14,22 @@ btnDialogo1.addEventListener('click', function() {
 });
 
 btnDialogo2.addEventListener('click', function() {
+    // Ocultar el segundo diálogo y mostrar el diálogo del astronauta
     const dialogo2 = document.querySelector('.dialogo2');
     const dialogoAstro1 = document.querySelector('.dialogoAstro1');
     dialogo2.style.display = 'none';
     dialogoAstro1.style.display = 'block';
 });
 
-
-
 btnDialogoAstro1.addEventListener('click', function() {
+    // Ocultar el diálogo del astronauta y mostrar el diálogo combinado
     const dialogoAstro1 = document.querySelector('.dialogoAstro1');
     const dialogoCombi = document.querySelector('.dialogoCombi');
     dialogoAstro1.style.display = 'none';
     dialogoCombi.style.display = 'block';
 });
 
-
-
 btnDialogoCombi.addEventListener('click', function() {
-    location.href = "/html/niveles/1Completado.html"
+    // Redireccionar a la página 1Completado.html
+    location.href = "/html/niveles/1Completado.html";
 });

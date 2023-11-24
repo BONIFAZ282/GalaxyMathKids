@@ -1,3 +1,4 @@
+/* Estilos para el cuerpo de la página */
 body {
     background-image: url(/img/fondo.jpg);
     color: #ffffff;
@@ -7,6 +8,7 @@ body {
     padding: 0;
 }
 
+/* Estilos para el contenedor del logo */
 #logo {
     width: 300px;
     background-color: transparent; /* Quita el color de fondo */
@@ -19,15 +21,18 @@ body {
     align-items: center;
 }
 
+/* Animación de rotación */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
+/* Estilos para la imagen del planeta */
 #planet-image {
     width: 200px; /* Ajusta el tamaño del planeta */
 }
 
+/* Estilos para el formulario de inicio de sesión */
 #login-form {
     background-color: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad del fondo */
     color: #ffffff;
@@ -38,11 +43,13 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilos para el encabezado del formulario */
 #login-form h2 {
     font-size: 1.5em;
     text-align: center;
 }
 
+/* Estilos para el campo de entrada de texto */
 input[type="text"] {
     width: calc(100% - 30px);
     padding: 15px;
@@ -53,10 +60,12 @@ input[type="text"] {
     font-size: 20px;
 }
 
+/* Estilos para el botón de enviar en el formulario */
 input[type="submit"]:hover {
     background-color: #ff6600;
 }
 
+/* Estilos para los botones generales */
 .button {
     display: inline-block;
     background-color: #ff6b6b;
@@ -76,6 +85,7 @@ input[type="submit"]:hover {
     background-color: #ff5e5b;
 }
 
+/* Animación de parpadeo */
 @keyframes parpadeo {
     0% {
         opacity: 1.0;
@@ -94,6 +104,7 @@ input[type="submit"]:hover {
     }
 }
 
+/* Clase de parpadeo */
 .parpadeo {
     animation-name: parpadeo;
     animation-duration: 1s;
@@ -101,6 +112,7 @@ input[type="submit"]:hover {
     animation-iteration-count: infinite;
 }
 
+/* Animación de rebote */
 @keyframes bounce {
     0%,
     20%,
@@ -115,10 +127,12 @@ input[type="submit"]:hover {
     }
 }
 
+/* Clase de rebote horizontal */
 .bouncex {
     animation: bounce 2s infinite;
 }
 
+/* Estilos para las imágenes a la izquierda y derecha */
 .imagen-izquierda {
     position: absolute;
     top: 50%;

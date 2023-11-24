@@ -87,13 +87,6 @@ function mostrarNinos() {
         parrafo.textContent = `${nombre} ${apellido} - ${edad} - ${tiempo} - ${puntuacion}`;
         parrafo.dataset.id = id;
 
-        // Crear un botón para eliminar el niño
-        const eliminarBoton = document.createElement('button');
-        eliminarBoton.onclick = () => eliminarNino(id);
-        eliminarBoton.textContent = 'Eliminar';
-        eliminarBoton.classList.add('btn', 'btn-eliminar');
-        parrafo.append(eliminarBoton);
-
         // Crear una línea horizontal para separar los niños
         const hr = document.createElement('hr');
 
@@ -124,15 +117,6 @@ function cargarNino(nino) {
     editando = true;
 }
 
-// Función para eliminar un niño de la lista
-function eliminarNino(id) {
-    // Filtrar la lista de niños para eliminar el niño con el ID especificado
-    listaNinos = listaNinos.filter(nino => nino.id !== id);
-
-    // Limpiar el contenido HTML anterior y mostrar la lista actualizada
-    limpiarHTML();
-    mostrarNinos();
-}
 
 // Función para limpiar el contenido HTML del contenedor de niños
 function limpiarHTML() {

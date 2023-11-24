@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configuración del conjunto de caracteres y título de la página -->
     <meta charset="UTF-8" />
     <title>Cronómetro</title>
+    
+    <!-- Enlaces a archivos de estilo CSS y a la biblioteca Font Awesome -->
     <link rel="stylesheet" href="/css/otros/parental.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <!-- Ícono de la página -->
+    <link rel="shortcut icon" href="/img/marte.png" />
 </head>
 <body>
-
+    <!-- Contenedor principal -->
     <div class="contenedor">
+        <!-- Sección izquierda del contenedor -->
         <div class="contenedor-izquierda">
+            <!-- Formulario para ingresar datos del niño -->
             <div class="datos-nino">
                 <h2>Ingresa los datos del niño</h2>
-            <form action="#" id="formulario">
-                <div class="campo">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" required>
-                </div>
-                <div class="campo">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" required>
-                </div>
-                <div class="campo">
-                    <label for="edad">Edad:</label>
-                    <input type="number" id="edad" required>
-                </div>
-                <div class="campo">
-                    <label for="tiempo">Tiempo:</label>
-                    <input type="text" id="tiempo" required>
-                </div>
-                <div class="campo">
-                    <label for="puntuacion">puntuacion:</label>
-                    <input type="text" id="puntuacion" required>
-                </div>
+                <form action="#" id="formulario">
+                    <!-- Campos de entrada para nombre, apellido, edad, tiempo y puntuación -->
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" required>
+                    </div>
+                    <div class="campo">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" required>
+                    </div>
+                    <div class="campo">
+                        <label for="tiempo">Tiempo:</label>
+                        <input type="text" id="tiempo" required>
+                    </div>
+                    <div class="campo">
+                        <label for="puntuacion">Puntuación:</label>
+                        <input type="text" id="puntuacion" required>
+                    </div>
 
-                <button class="btn-registrar" id="btnAgregar">Agregar</button>
-            </form>
+                    <!-- Botón para agregar los datos -->
+                    <button class="btn-registrar" id="btnAgregar">Agregar</button>
+                </form>
             </div>
+            
+            <!-- Marco que contiene el cronómetro y botones de control -->
             <div class="marco">
                 <div class="tiempo" id="tiempoCronometro">00:00:00.000</div>
                 <div class="botones-contenedor">
+                    <!-- Botones para iniciar, pausar y reiniciar el cronómetro -->
                     <div class="btn" onclick="iniciar()">
                         <i class="fas fa-play"></i>
                     </div>
@@ -52,12 +65,15 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Sección derecha del contenedor con el listado de registros del niño -->
         <div class="div-listado">
             <h2>Record del Niño</h2>
             <div class="div-ninos"></div>
         </div>
     </div>
 
+    <!-- Inclusión de scripts JavaScript para el cronómetro y la gestión parental -->
     <script src="/js/otros/cronometro.js"></script>
     <script src="/js/otros/parental.js"></script>
 </body>

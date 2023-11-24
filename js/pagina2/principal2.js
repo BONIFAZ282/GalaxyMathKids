@@ -1,7 +1,7 @@
-// -------- principal.js --------
 /**
  * Control principal del juego y elementos DOM.
  */
+
 // Elementos DOM
 const btnOcultarCalcu = document.getElementById("ocultarCalcu");
 const areaTrabajo = document.getElementById("areaTrabajo");
@@ -13,7 +13,7 @@ const btnContinuar = document.getElementById("btnContinuar");
 const btnComienzaAventura = document.getElementById("comienzaAventura");
 const galaxia1 = document.querySelector(".galaxia1");
 
-/* variables  */
+/* Variables  */
 let astro = null;
 let planetasArray = [];
 let preguntasArray = [];
@@ -23,48 +23,55 @@ let numeroplanetas = dataplanetas.length;
 let index_planeta = -1;
 let index_pregunta = 0;
 
-// Función para establecer el área de trabajo y mostrar el nombre del jugador.
+/**
+ * Función para establecer el área de trabajo y mostrar el nombre del jugador.
+ */
 function establecerAreaTrabajo() {
-  // obtenemos el nombre almacenado en el navegador
+  // Obtenemos el nombre almacenado en el navegador
   nombreJugador.innerHTML = "Hola " + localStorage.getItem("jugador") + " !!";
 
-  // seteamos las dimensiones del area de trabajo
+  // Seteamos las dimensiones del área de trabajo
   areaTrabajo.style.height = window.innerHeight - 10 + "px";
   areaTrabajo.style.width = window.innerWidth - 10 + "px";
   areaTrabajo.style.top = "0px";
 }
 
-// Función para poblar la galaxia con planetas en posiciones aleatorias.
+/**
+ * Función para poblar la galaxia con planetas en posiciones aleatorias.
+ */
 function poblarGalaxiaConPlanetasRandom() {
   let posX = 0;
   let posY = 0;
 
   for (let pla = 0; pla < numeroplanetas; pla++) {
-    // obtenemos la posicion random
+    // Obtenemos la posición random
     posX = getRandom(0, window.innerWidth - 250);
     posY = getRandom(0, window.innerHeight - 350);
 
-    // instancia del objeto
+    // Instancia del objeto
     var plaTemp = new Planeta(areaTrabajo, dialogInfoPlaneta, posX, posY);
 
-    // insertamos en el array de planetas
+    // Insertamos en el array de planetas
     planetasArray.push(plaTemp);
 
-    // insertamos el planeta y le ponemos un nombre
+    // Insertamos el planeta y le ponemos un nombre
     plaTemp.insertarElemento(dataplanetas[pla]);
   }
 }
 
-// Función para obtener un número aleatorio en un rango dado.
+/**
+ * Función para obtener un número aleatorio en un rango dado.
+ * @param {number} min - Valor mínimo del rango.
+ * @param {number} max - Valor máximo del rango.
+ * @returns {number} - Número aleatorio dentro del rango.
+ */
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
 /**
- * Esta funcion carga las preguntas en un array
- * de manera aleatoria
+ * Función para cargar preguntas en un orden aleatorio.
  */
-// Función para cargar preguntas en un orden aleatorio.
 function cargarPreguntasRandom() {
   let numeros_random = [];
   let random = 0;
@@ -84,14 +91,20 @@ function cargarPreguntasRandom() {
   });
 }
 
+// Puntuación del juego
 let puntuacion2 = 0;
 
-// Función para actualizar la puntuación en el div
+/**
+ * Función para actualizar la puntuación en el div.
+ */
 function actualizarPuntuacion() {
   const puntuacionDiv = document.getElementById("puntuacion2");
   puntuacionDiv.textContent = `PUNTUACIÓN: ${puntuacion2}`;
 }
 
+/**
+ * Función para reiniciar los estilos de los botones.
+ */
 function reiniciarEstilosBotones() {
   const botones = dialogPregunta.querySelectorAll(".btn");
   for (let i = 0; i < botones.length; i++) {
@@ -99,7 +112,10 @@ function reiniciarEstilosBotones() {
   }
 }
 
-
+/**
+ * Función para manejar la respuesta a una pregunta.
+ * @param {number} index_respuesta - Índice de la respuesta seleccionada.
+ */
 function responderPregunta(index_respuesta) {
   if (preguntaActualObj.verificarRespuesta(index_respuesta)) {
     // Respuesta correcta
@@ -123,7 +139,7 @@ function responderPregunta(index_respuesta) {
     setTimeout(function () {
       preguntaActualObj.ocultarDialog();
 
-      // Incrementar el index de pregunta y planeta
+      // Incrementar el índice de pregunta y planeta
       index_pregunta++;
       index_planeta++;
 
@@ -154,7 +170,9 @@ function responderPregunta(index_respuesta) {
   }
 }
 
-// Función para iniciar el juego.
+/**
+ * Función para iniciar el juego.
+ */
 function iniciarJuego() {
   establecerAreaTrabajo();
   poblarGalaxiaConPlanetasRandom();
@@ -167,8 +185,7 @@ function iniciarJuego() {
 btnComienzaAventura.addEventListener("click", function () {
   galaxia1.style.display = "none";
 
-  // luego de clicar, se lanza el dialog de preguntas
-  // comenzamos con la pregunta numero 0
+  // Después de clicar, se lanza el diálogo de preguntas comenzando con la pregunta número 0
   preguntaActualObj = preguntasArray[index_pregunta];
   preguntasArray[index_pregunta].mostrarDialog();
 });
@@ -180,17 +197,19 @@ btnComienzaAventura.addEventListener("click", function () {
 btnContinuar.addEventListener("click", function () {
   dialogInfoPlaneta.style.display = "none";
 
+  // Verificar si es el final del juego
   if (index_planeta == numeroplanetas - 1) {
     console.log("Fin del juego");
-    // colocar aqui un mensaje de ganaste el juego
+    // Colocar aquí un mensaje de "ganaste el juego" o redirigir a la página de puntuación
     window.location.href = "/html/otros/puntuacion2.html";
     return;
   }
 
+  // Mostrar la siguiente pregunta
   preguntaActualObj.mostrarDialog();
 });
 
-// evento para reconfigurar el tamaño de la pantalla
+// Evento para reconfigurar el tamaño de la pantalla
 window.addEventListener("resize", () => {
   location.reload();
 });

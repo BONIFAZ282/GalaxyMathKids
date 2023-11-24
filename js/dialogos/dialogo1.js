@@ -9,6 +9,7 @@ const btnDialogoAstro2 = document.getElementById("dialogoAstro2");
 
 // Agregar eventos de escucha a los botones de diálogo
 btnDialogo1.addEventListener("click", function () {
+  // Ocultar el diálogo actual y mostrar el siguiente
   const dialogo1 = document.querySelector(".dialogo1");
   const dialogo2 = document.querySelector(".dialogo2");
   dialogo1.style.display = "none";
@@ -16,6 +17,7 @@ btnDialogo1.addEventListener("click", function () {
 });
 
 btnDialogo2.addEventListener("click", function () {
+  // Ocultar el diálogo actual y mostrar el siguiente
   const dialogo2 = document.querySelector(".dialogo2");
   const dialogo3 = document.querySelector(".dialogo3");
   dialogo2.style.display = "none";
@@ -23,6 +25,7 @@ btnDialogo2.addEventListener("click", function () {
 });
 
 btnDialogo3.addEventListener("click", function () {
+  // Ocultar el diálogo actual y mostrar el siguiente
   const dialogo3 = document.querySelector(".dialogo3");
   const dialogoAstro1 = document.querySelector(".dialogoAstro1");
   dialogo3.style.display = "none";
@@ -30,6 +33,7 @@ btnDialogo3.addEventListener("click", function () {
 });
 
 btnDialogoAstro1.addEventListener("click", function () {
+  // Ocultar el diálogo actual y mostrar el siguiente
   const dialogoAstro1 = document.querySelector(".dialogoAstro1");
   const dialogo4 = document.querySelector(".dialogo4");
   dialogoAstro1.style.display = "none";
@@ -37,6 +41,7 @@ btnDialogoAstro1.addEventListener("click", function () {
 });
 
 btnDialogo4.addEventListener("click", function () {
+  // Ocultar el diálogo actual y mostrar el siguiente
   const dialogo4 = document.querySelector(".dialogo4");
   const dialogoCombi = document.querySelector(".dialogoCombi");
   dialogo4.style.display = "none";
@@ -44,6 +49,7 @@ btnDialogo4.addEventListener("click", function () {
 });
 
 btnDialogoCombi.addEventListener("click", function () {
+  // Ocultar el diálogo actual y mostrar el siguiente
   const dialogoCombi = document.querySelector(".dialogoCombi");
   const dialogoAstro2 = document.querySelector(".dialogoAstro2");
   dialogoCombi.style.display = "none";

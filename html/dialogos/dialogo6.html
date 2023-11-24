@@ -2,31 +2,45 @@
 <html lang="es">
 
 <head>
+    <!-- Configuración del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galaxia en Peligro</title>
+
+    <!-- Enlace a la hoja de estilo para el segundo diálogo -->
     <link rel="stylesheet" href="/css/dialogos/dialogo2.css">
+
+    <!-- Icono de la página -->
+    <link rel="shortcut icon" href="/img/marte.png" />
 </head>
 
 <body>
+    <!-- Reproductor de audio principal con música de fondo -->
     <audio id="myAudio" loop autoplay>
         <source src="/music/alien.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Contenedor principal -->
     <div class="container">
+        <!-- Sección de alienígenas -->
         <div class="alienigenas">
+            <!-- Tercer diálogo -->
             <div class="dialogo1">
-                <p>¡Gracias, astronauta! Salveste el universo entero</p>
+                <p>¡Gracias, astronauta! Salvaste el universo entero</p>
                 <button class="btn-siguiente" id="dialogo1">
                     <a href="#">Siguiente</a>
                 </button>
             </div>
+
+            <!-- Cuarto diálogo -->
             <div class="dialogo2">
-                <p>Todos los serves vivos del universo estamos en deuda con tigo, por destruir a esa especie que multiplicaba planetas</p>
+                <p>Todos los seres vivos del universo estamos en deuda contigo, por destruir a esa especie que multiplicaba planetas</p>
                 <button class="btn-siguiente" id="dialogo2">
                     <a href="#">Siguiente</a>
                 </button>
             </div>
 
+            <!-- Diálogo combinado -->
             <div class="dialogoCombi" >
                 <p>GRACIAS POR TODO, ESTE ES EL FIN DE TU MISIÓN ESPACIAL</p>
                 <button class="btn-siguiente" id="dialogoCombi">
@@ -34,26 +48,32 @@
                 </button>
             </div>
 
+            <!-- Grupo de alienígenas -->
             <div class="grupo_alienigena">
                 <img src="/img/astronauta1.png" alt="Alienígenas">
                 <img src="/img/astronauta2.png" alt="Alienígenas">
                 <img src="/img/astronauta3.png" alt="Alienígenas">
             </div>
-
         </div>
+
+        <!-- Sección del astronauta -->
         <div class="astronauta">
+            <!-- Séptimo diálogo -->
             <div class="dialogoAstro1" >
                 <p>Siempre estaré dispuesto a ayudar. Cuídense, amigos.</p>
                 <button class="btn-siguiente" id="dialogoAstro1">
                     <a href="#">Siguiente</a>
                 </button>
             </div>
+
+            <!-- Grupo del astronauta -->
             <div class="grupo_astronauta">
                 <img src="/img/astronauta_130x150.png" alt="Astronauta">
             </div>
         </div>
     </div>
 
+    <!-- Scripts de JavaScript -->
     <script src="/js/dialogos/dialogo6.js"></script>
     <script src="/js/otros/sonidos.js"></script>
 </body>

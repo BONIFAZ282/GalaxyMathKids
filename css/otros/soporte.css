@@ -1,3 +1,4 @@
+/* Estilo global del cuerpo de la página */
 body {
     background-image: url('/img/fondo.jpg');
     color: #ffffff;
@@ -7,6 +8,7 @@ body {
     padding: 0;
 }
 
+/* Estilo del contenedor principal que alinea y centra el formulario */
 .container {
     display: flex;
     justify-content: center;
@@ -14,6 +16,7 @@ body {
     height: 90vh;
 }
 
+/* Estilo del formulario de soporte técnico */
 .soporte-form {
     background-color: #0E103D;
     border: 5px solid #00D4FF;
@@ -26,17 +29,20 @@ body {
     margin: 20px;
 }
 
+/* Estilo para el título del formulario */
 .soporte-form h2 {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
+/* Estilo para las etiquetas del formulario */
 .soporte-form label {
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
 }
 
+/* Estilo para los campos de entrada del formulario */
 .soporte-form input,
 .soporte-form textarea {
     width: 100%;
@@ -44,12 +50,12 @@ body {
     margin-bottom: 12px;
     border: 1px solid #00D4FF;
     border-radius: 5px;
-    margin-left: -8px;
     background-color: #0E103D;
     color: #ffffff;
     font-size: 14px;
 }
 
+/* Estilo para el botón de envío del formulario */
 .soporte-form button {
     background-color: #ff6b6b;
     color: #fff;
@@ -61,6 +67,7 @@ body {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+/* Estilo para el botón de envío del formulario al pasar el mouse */
 .soporte-form button:hover {
     background-color: #ff5e5b;
     transform: scale(1.05);

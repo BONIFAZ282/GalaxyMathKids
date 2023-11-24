@@ -2,30 +2,54 @@
 <html>
 
 <head>
+    <!-- Definición del título de la página -->
     <title>Login</title>
+    
+    <!-- Enlace al archivo de estilo CSS -->
     <link rel="stylesheet" type="text/css" href="/css/otros/login.css">
+    <link rel="shortcut icon" href="/img/marte.png" />
 </head>
 
 <body>
+    <!-- Contenedor principal del contenido -->
     <div id="logo">
+        <!-- Imagen del planeta Marte -->
         <img src="/img/marte.png" alt="Planeta" id="planet-image">
+        
+        <!-- Encabezado principal del sitio -->
         <h1>GalaxyMathKids</h1>
     </div>
+
+    <!-- Contenedor del formulario de inicio de sesión -->
     <div id="login-form">
+        <!-- Imagen a la izquierda del formulario -->
         <img src="/img/aventura.png" class="imagen-izquierda">
+        
+        <!-- Encabezado secundario con efecto de rebote -->
         <h2 class="bouncex">Ingresa tu nombre</h2>
+
+        <!-- Formulario de inicio de sesión -->
         <form>
+            <!-- Campo de entrada para el nombre de usuario -->
             <input id="nombreUsuario" type="text" name="usuario" placeholder="¿Cómo te llamas?">
             <br>
+            
+            <!-- Botón para comenzar el juego -->
             <button type="button" class="button" onclick="botonJugar()">
                 Jugar
             </button>
+
+            <!-- Botón para ver las reglas del juego -->
             <button type="button" class="button" onclick="botonReglas()">
                 Como Jugar
             </button>
         </form>
+        
+        <!-- Imagen a la derecha del formulario -->
         <img src="/img/astronauta_130x150.png" class="imagen-derecha">
     </div>
+
+    <!-- Inclusión del script JavaScript -->
     <script src="/js/otros/login.js"></script>
 </body>
 

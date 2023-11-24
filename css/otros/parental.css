@@ -1,7 +1,9 @@
+/* Transición suave para todos los elementos */
 * {
     transition: all 0.3s;
 }
 
+/* Estilos generales del cuerpo de la página */
 body {
     font-family: 'Comic Sans MS', cursive;
     background-image: url('/img/fondo.jpg');
@@ -13,6 +15,7 @@ body {
     color: white;
 }
 
+/* Estilos para el contenedor principal */
 .contenedor {
     display: flex;
     justify-content: space-between;
@@ -21,7 +24,7 @@ body {
     width: 80%;
 }
 
-
+/* Estilos para la sección izquierda del contenedor */
 .contenedor-izquierda {
     display: flex;
     flex-direction: column;
@@ -31,6 +34,7 @@ body {
     margin-top: 20px;
 }
 
+/* Estilos para el marco que contiene el cronómetro y botones de control */
 .marco {
     border-radius: 30px;
     background: black;
@@ -41,11 +45,13 @@ body {
     text-align: center;
 }
 
+/* Contenedor para los botones de control del cronómetro */
 .botones-contenedor {
     display: flex;
     justify-content: space-around;
 }
 
+/* Estilos para los botones de control del cronómetro */
 .btn {
     cursor: pointer;
     display: inline-block;
@@ -53,6 +59,7 @@ body {
     padding: 20px;
 }
 
+/* Estilos para la sección de ingreso de datos del niño */
 .datos-nino {
     background: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
@@ -62,17 +69,20 @@ body {
     width: 500px;
 }
 
+/* Estilos para el título de la sección de ingreso de datos del niño */
 .datos-nino h2 {
     color: #fff;
     font-size: 24px;
 }
 
+/* Estilos para los campos de entrada en el formulario */
 .campo {
     margin-bottom: 15px;
     text-align: left;
     margin-right: 10px;
 }
 
+/* Estilos para las etiquetas de los campos de entrada */
 .campo label {
     display: block;
     color: #fff;
@@ -80,6 +90,7 @@ body {
     margin-bottom: 5px;
 }
 
+/* Estilos para los campos de entrada */
 .campo input {
     width: 100%;
     padding: 10px;
@@ -89,6 +100,7 @@ body {
     outline: none;
 }
 
+/* Estilos para el botón de registrar */
 .btn-registrar {
     display: inline-block;
     padding: 10px 20px;
@@ -101,10 +113,12 @@ body {
     cursor: pointer;
 }
 
+/* Estilos al pasar el ratón por encima del botón de registrar */
 .btn-registrar:hover {
     background-color: #00C2E0;
 }
 
+/* Estilos para la sección de listado de registros del niño */
 .div-listado {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
@@ -132,6 +146,7 @@ body {
     cursor: pointer;
 }
 
+/* Estilos al pasar el ratón por encima de los botones de editar y eliminar */
 .btn-editar:hover,
 .btn-eliminar:hover {
     background-color: #ff5e5b;
