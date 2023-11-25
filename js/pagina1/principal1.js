@@ -23,6 +23,7 @@ let preguntaActualObj = null;
 let numeroplanetas = dataplanetas.length;
 let index_planeta = -1;
 let index_pregunta = 0;
+let puntuacion1 = 0;
 
 // Función para establecer el área de trabajo y mostrar el nombre del jugador.
 function establecerAreaTrabajo() {
@@ -85,8 +86,6 @@ function cargarPreguntasRandom() {
     preguntasArray.push(pre);
   });
 }
-
-let puntuacion1 = 0;
 
 // Función para actualizar la puntuación en el div.
 function actualizarPuntuacion() {
