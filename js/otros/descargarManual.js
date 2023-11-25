@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Función que inicia la descarga del manual en formato PDF
 function descargarManual() {
     // Ruta al archivo PDF existente en el servidor
-    const rutaPDF = "/pdf/manual.pdf";
+    const rutaPDF = "/pdf/OFICIAL-MANUAL.pdf";
 
     // Crea un elemento de enlace <a> con un atributo download para la descarga del archivo
     const enlaceDescarga = document.createElement('a');
