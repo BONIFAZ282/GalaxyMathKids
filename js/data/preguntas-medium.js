@@ -1,5 +1,5 @@
 // Array de preguntas MEDIO
-// preguntas_medium
+
 const preguntas_medium = [
   {
     "numeroPregunta": "1",
